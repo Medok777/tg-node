@@ -1,8 +1,9 @@
 import { Telegraf, Markup } from "telegraf";
 import { message } from "telegraf/filters";
+import dotenv from "dotenv";
+dotenv.config();
 
-const TOKEN = "8432228006:AAEHR4dk_UvTcasqrjYqDT4P9pGRVFp_0Eo";
-const bot = new Telegraf(TOKEN);
+const bot = new Telegraf(process.env.TOKEN);
 const webAppUrl = "https://angular-tg-app-54aa7.web.app";
 
 bot.command("start", (ctx) => {
